@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  server:
+    build: 
+      context: .
+      dockerfile: ./GGO-Server/Dockerfile
+    ports:
+     - 5500:5500
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
